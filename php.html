@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PHP | Zadanie</title>
+	<meta charset="utf-8">
+	<meta name="keywords" content="PHP">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script type="text/javascript" src="clock.js"></script>
+</head>
+<body onload="startTime()">
+	<div id="body">
+		<div id="top-body">
+			<center>
+				<a href="index.html"><img src="pictures/menu/index.png"></a>
+				<a href="html.html"><img src="pictures/menu/html.png"></a>
+				<a href="css.html"><img src="pictures/menu/css.png"></a>
+				<a href="php.html"><img src="pictures/menu/php.png"></a>
+				<a href="javascript.html"><img src="pictures/menu/js.png"></a>
+			</center>
+			<b><div id="clock"></div></b>
+		</div>
+		<div id="mid-body">
+			<img src="pictures/logos/php.png" align="right" class="picture">
+			<h2>
+				1. Čo je a ako vzniklo PHP
+			</h2>
+			<p class="tab">
+				PHP je <b>skriptovací jazyk</b> pre tvorbu dynamických webových stránok. V oblasti webových technológií <b>na strane servera</b> patrí medzi najpoužívanejšie nástroje. Je <b>freeware, nezávislý na platforme</b> (existujú verzie pre Windows, UNIX, LINUX). Táto technológia nie je viazaná na žiadny server, najlepšie je však implementovaná na serveri APACHE. Skripty PHP sa vkladajú do (X)HTML kódu. (<a href="http://www.w3schools.com/php/default.asp" target="_blank" style="color: brown"><u>do sveta</u></a>)
+			</p>
+			<p class="tab">
+				 PHP <b>je vyšší programovací jazyk, je interpretovaný, štruktúrovaný</b> (bol inšpirovaný jazykmi podporujúcimi štruktúrované programovanie, veľa vlastností prebral od jazyka C a Perl). V neskorších verziách bol rozšírený o možnosť používať objekty. 
+			</p>
+			<P class="tab">
+				PHP je nástupcom produktu PHP/FI (Personal Home Page/Forms Interpreter), ktorý vytvoril Rasmus Lerdorf v roku 1995. 
+			</P>
+			<p>
+				PHP dnes používa niekoľko stoviek tisícov vývojárov a inštalované je na niekoľkých miliónoch serverov (asi 20 % domén internetu).
+			</p>
+			<p>
+				<b>
+				PHP je skriptovací jazyk - jeho skripty sa vkladajú do HTML kódu. PHP je interpret - pri každom spustení skriptu je jeho zdrojový kód prevádzaný príkaz po príkaze do spustiteľného kódu. Neexistuje teda žiadna binárna verzia zdrojových súborov PHP skriptov.
+				</b>
+			</p>
+			<h2>
+				2. Čo budeme potrebovať
+			</h2>
+			<ul>
+				<li>samotný <b>PHP interpret, ktorý bude interpretovať (vykonávať) naše skripty</b></li>
+				<li><b>HTTP server</b>. Na výber ich máme niekoľko, ale PHP si najlepšie rozumie so <b>serverom Apache</b> (Stiahnuť ho môžeme aj zo stránky projektu Apache (<a href="www.apache.org" target="_blank" style="color: brown"><u>www.apache.org</u></a>) v sekcii HTTP server.)</li>
+				<li>Užitočný bude aj manuál k samotnému jazyku PHP, ktorý je priebežne inovovaný tak, ako vznikajú nové verzie jazyka PHP</li>
+				<li>nástroj na samotné písanie skriptov - PHP editor. V podstate by sme mohli použiť aj Poznámkový blok, ale pri rozsiahlejších skriptoch by bola práca v ňom neprehľadná a ťažkopádna. Vhodných editorov existuje mnoho.
+			</ul>
+			<h2>
+				3. Ako to celé funguje
+			</h2>
+			<ul>
+				<li>samotný PHP interpret, ktorý bude interpretovať (vykonávať) naše skripty</li>
+				<li>HTTP server. Na výber ich máme niekoľko, ale PHP si najlepšie rozumie so serverom Apache (Stiahnuť ho môžeme aj zo stránky projektu Apache (www.apache.org) v sekcii HTTP server.)</li>
+				<li>Užitočný bude aj manuál k samotnému jazyku PHP, ktorý je priebežne inovovaný tak, ako vznikajú nové verzie jazyka PHP</li>
+				<li>nástroj na samotné písanie skriptov - PHP editor. V podstate by sme mohli použiť aj Poznámkový blok, ale pri rozsiahlejších skriptoch by bola práca v ňom neprehľadná a ťažkopádna. Vhodných editorov existuje mnoho.</li>
+			</ul>
+		</div>
+		<div id="bottom-body">
+			<center>
+				Vytvoril Igor Novák
+				<br>
+				<script>
+					function datum() {
+						var dat = new Date();
+						dat.setTime(Date.parse(document.lastModified));
+						var mesiac=1;
+						mesiac=mesiac+dat.getMonth();
+						var vrat = dat.getDate() + "." + mesiac + "." + dat.getFullYear();
+						return vrat;
+					}
+				</script>
+					Aktualizované
+					<script>
+						document.write(datum());
+					</script>
+					<br>
+					<br>
+					<script>
+						//document.write(document.lastModified);
+					</script>
+			</center>
+		</div>
+	</div>
+</body>
+</html>

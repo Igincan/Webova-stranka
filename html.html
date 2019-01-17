@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML | Zadanie</title>
+	<meta charset="utf-8">
+	<meta name="keywords" content="HTML">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script type="text/javascript" src="clock.js"></script>
+</head>
+<body onload="startTime()">
+	<div id="body">
+		<div id="top-body">
+			<center>
+				<a href="index.html"><img src="pictures/menu/index.png"></a>
+				<a href="html.html"><img src="pictures/menu/html.png"></a>
+				<a href="css.html"><img src="pictures/menu/css.png"></a>
+				<a href="php.html"><img src="pictures/menu/php.png"></a>
+				<a href="javascript.html"><img src="pictures/menu/js.png"></a>
+			</center>
+			<b><div id="clock"></div></b>
+		</div>
+		<div id="mid-body">
+			<img src="pictures/logos/html.png" align="right" class="picture">
+			<h2>
+				HTML jazyk
+			</h2>
+			<h3>
+				1. Charakteristika jazyka
+			</h3>
+			<p>
+				<b>HTML</b> (HyperTextMarkupLanguage) – základný nástroj na tvorbu stránok je značkovací (nie programovací) jazyk pre tvorbu hypertextových dokumentov. V ňom autor popisuje logickú štruktúru dokumentu. Výsledok – obyčajný textový súbor. Na popis sa používajú <i><b>značky/tagy</b></i>. (párové, nepárové). Súbor s popisom dokumentu dorazí do prehliadača. Ten postupne prechádza dokumentom a rozoznáva HTML značky. Potom, na základe možností, ktoré mu OS ponúka a podľa svojich nastavení rozhodne ako zobrazí nadpis, odsek, ako a či vôbec bude v texte umiestnený obrázok. Teda až prehliadač rozhoduje o tom, ako sa stránka na obrazovke zobrazí. Ak je v texte značka, ktorú nepozná, jednoducho ju ignoruje. (<a href="http://www.w3schools.com/html/default.asp" target="_blank" style="color: brown"><u>do sveta</u></a>)
+			</p>
+			<h3>
+				Štruktúra HTML dokumentu
+			</h3>
+			<p>
+				<code>
+					&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"&gt;
+					<br>
+					&lt;html&gt;
+					<br>
+					&nbsp;&nbsp;&lt;head&gt;
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Náš prvý HTML dokument &lt;/title&gt;
+					<br>
+					&nbsp;&nbsp;&lt;/head&gt;
+					<br>
+					&nbsp;&nbsp;&lt;body&gt;
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Vitajte na stránke IV. A triedy!&lt;/h1&gt;
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Toto je prvý odstavec nášho dokumentu&lt;/p&gt;
+					<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;...a tu bude obsah celej našej stránky...
+					<br>
+					&nbsp;&nbsp;&lt;/body&gt;
+					<br>
+					&lt;/html&gt;
+				</code>
+			</p>
+		</div>
+		<div id="bottom-body">
+			<center>
+				Vytvoril Igor Novák
+				<br>
+				<script>
+					function datum() {
+						var dat = new Date();
+						dat.setTime(Date.parse(document.lastModified));
+						var mesiac=1;
+						mesiac=mesiac+dat.getMonth();
+						var vrat = dat.getDate() + "." + mesiac + "." + dat.getFullYear();
+						return vrat;
+					}
+				</script>
+					Aktualizované
+					<script>
+						document.write(datum());
+					</script>
+					<br>
+					<br>
+					<script>
+						//document.write(document.lastModified);
+					</script>
+			</center>
+		</div>
+		<br><br><br><br><br><br>
+	</div>
+</body>
+</html>

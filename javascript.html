@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript | Zadanie</title>
+	<meta charset="utf-8">
+	<meta name="keywords" content="JavaScript">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script type="text/javascript" src="clock.js"></script>
+</head>
+<body onload="startTime()">
+	<div id="body">
+		<div id="top-body">
+			<center>
+				<a href="index.html"><img src="pictures/menu/index.png"></a>
+				<a href="html.html"><img src="pictures/menu/html.png"></a>
+				<a href="css.html"><img src="pictures/menu/css.png"></a>
+				<a href="php.html"><img src="pictures/menu/php.png"></a>
+				<a href="javascript.html"><img src="pictures/menu/js.png"></a>
+			</center>
+			<b><div id="clock"></div></b>
+		</div>
+		<div id="mid-body">
+			<img src="pictures/logos/js.png" align="right" class="picture">
+			<h2 align="center">
+				JavaScript
+			</h2>
+			<h3>
+				Úvod a základná charakteristika
+			</h3>
+			<ul>
+				<li>Bol vyvinutý firmou Netscape Corporation  (v spolupráci so Sun Microsystem)</li>
+				<li>Tvorcom skriptovacieho jazyka je Brendan Eich</li>
+				<li>Vznikol v 2. polovici 90. - tych rokov minulého storočia</li>
+				<li>Je to jazyk interpretovaný, to znamená pokiaľ v ňom urobíme chybu, zistíme ju len v prípade, že používame prehliadač  umožňujúci hlásiť chyby v skriptoch na webových stránkach</li>
+				<li>Funguje na strane klienta</li>
+				<li>Je objektovo orientovaný</li>
+				<li>Je nezávislý na platforme </li>
+				<li>Základná syntax pripomína C/C++ či mnohé iné podobné jazyky ako Java, C#, PHP, PERL</li>
+				<li>JavaScript je však na rozdiel od väčšiny menovaných programovacích jazykov beztypovým jazykom</li>
+				<li><a href="http://www.w3schools.com/js/default.asp" target="_blank" style="color: brown"><u>do sveta</u></a></li>
+			</ul>
+			<h3>
+				Vloženie skriptu do HTML dokumentu
+			</h3>
+			<p>
+				JavaScriptový program môžeme do www stránky vložiť pomocou HTML tagu script. Napr.:
+			</p>
+			<p>
+				<code>
+					&lt;script  type=“text/javascript“&gt;
+					<br>
+					/* ... programový kód ... */
+					<br>
+					&lt;/script&gt;
+				</code>
+			</p>
+			<p>
+				<b>Možnosti včlenenia:</b>
+			</p>
+			<ol>
+				<li>do hlavičky</li>
+				<li>do tela HTML dokumentu</li>
+				<li>
+					do samostatného súboru a tento potom prilinkovať k www stránke napr.
+					<br>
+					<code>&lt;script type=“text/javascript“ src=“main.js“&gt; &lt;/script&gt;</code>
+				</li>
+				<li>priamo do tagu pre ošetrovanie udalostí v niektorých objektoch</li>
+			</ol>
+			<p>
+				Prehliadač  skript  vykoná v momente, keď ho načíta.
+			</p>
+			<h3>
+				DOM – objektový model dokumentu
+			</h3>
+			<p>
+				Na čítanie dát z dokumentu, ako aj na jeho ľubovoľnú úpravu, sa používa tzv. DOM (z angl. Document Object Model, t.j. objektový model dokumentu). DOM nám ponúka kolekciu objektov, ktoré reprezentujú prehliadačom aktuálne načítaný dokument. S týmito objektmi môžeme pracovať podľa ľubovôle, a teda ich aj meniť. Kolekciu DOM objektov zastrešuje objekt document.
+			</p>
+			<h4>
+				JavaScriptové frameworky a knižnica JQuery
+			</h4>
+			<p>
+				V praktickom využití JavaScriptu nám bráni fakt, že jeho implementácie v rôznych prehliadačoch, dokonca v ich rôznych verziách, nie sú úplne kompatibilné. <b>Musíme teda akceptovať fakt, že podpora JavaScriptu, DOM, ale aj CSS v prehliadačoch nie je jednotná.</b> Tento problém sa postupne zlepšuje, stav stopercentnej kompatibility zrejme nikdy nedosiahneme. Preto je pri tvorbe webových stránok nutnosťou testovať vo viacerých prehliadačoch.
+			</p>
+			<p>
+				Existuje metodika, ktorá nám výrazne uľahčí prácu s JavaScriptom a umožní nám kód písať tak, aby sme jeho kompatibilitu mali dopredu z veľkej časti zaručenú (otestovať výsledok vo viacerých prehliadačoch by sme, pre istotu, tak či tak mali). Takúto výhodu nám prinášajú tzv. <b>JavaScriptové frameworky</b>. Ide o <b>JavaScriptové knižnice</b>, ktoré nám sprostredkúvajú prácu s DOM, (a teda v konečnom dôsledku s jednotlivými HTML elementmi, ktoré webovú stránku tvoria) nepriamo, pomocou objektov, funkcií a metód, ktoré sú súčasťou knižnice.
+			</p>
+		</div>
+		<div id="bottom-body">
+			<center>
+				Vytvoril Igor Novák
+				<br>
+				<script>
+					function datum() {
+						var dat = new Date();
+						dat.setTime(Date.parse(document.lastModified));
+						var mesiac=1;
+						mesiac=mesiac+dat.getMonth();
+						var vrat = dat.getDate() + "." + mesiac + "." + dat.getFullYear();
+						return vrat;
+					}
+				</script>
+					Aktualizované
+					<script>
+						document.write(datum());
+					</script>
+					<br>
+					<br>
+					<script>
+						//document.write(document.lastModified);
+					</script>
+			</center>
+		</div>
+	</div>
+</body>
+</html>

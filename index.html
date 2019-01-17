@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index | Zadanie</title>
+	<meta charset="utf-8">
+	<meta name="keywords" content="HTML, CSS, PHP, JavaScript">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script type="text/javascript" src="clock.js"></script>
+</head>
+<body onload="startTime()">
+	<div id="body">
+		<div id="top-body">																<!--Hlavička-->
+			<center>																	<!--Menu-->
+				<a href="index.html"><img src="pictures/menu/index.png"></a>
+				<a href="html.html"><img src="pictures/menu/html.png"></a>
+				<a href="css.html"><img src="pictures/menu/css.png"></a>
+				<a href="php.html"><img src="pictures/menu/php.png"></a>
+				<a href="javascript.html"><img src="pictures/menu/js.png"></a>
+			</center>
+			<b><div id="clock"></div></b>
+		</div>
+		<div id="mid-body">																<!--Telo-->
+			<h2>
+				Základné technológie na tvorbu www stránok
+			</h2>
+			<p>
+				Medzi najpoužívanejšie technológie pre tvorbu www stránok dnes patria : HTML (XHTML), CSS, PHP a JavaScript.
+				<br>
+				Stránky vytvorené len pomocou HTML jazyka sa nazývajú <b>statické</b>. Takáto stránka sa každému návštevníkovi a v každom čase zobrazí rovnako.
+				<br>
+				Stránky, ktoré sa môžu dynamicky generovať napr. v závislosti od času alebo činnosti návštevníka nazývame <b>dynamické</b>.
+			</p>
+			<h3>
+				HTML (XHTML)
+			</h3>
+			<p>
+				<a href="html.html" style="color: brown"><u>HTML</u></a> je značkovací jazyk. Značkuje (označuje) časti dokumentu, stránky. To znamená, že pomocou HTML určujeme, aký <b>význam</b> bude mať tá ktorá časť HTML stránky. Pomocou HTML napr. povieme, že tento kus textu bude nadpis, iný kus textu odsek a  iný zas tabuľka.
+			</p>
+			<h3>
+				CSS
+			</h3>
+			<p>
+				<a href="css.html" style="color: brown"><u>CSS</u></a> je formátovací jazyk. To znamená, že určuje, ako bude ktorá časť stránky vyzerať. Pomocí CSS štýlu  teda môžeme určiť  <b>vzhľad</b> stránky. CSS teda hovorí, že nadpis (o ktorom HTML určilo, že je nadpis) bude napr. modrý, že odsek sa bude zarovnávať na stred a že tabuľka bude na zelenom pozadí. Naopak už nehovorí, ktorá časť stránky bude tým nadpisom, odsekom či tabuľkou.
+			</p>
+			<h3>
+				PHP
+			</h3>
+			<p>
+				<a href="php.html" style="color: brown"><u>PHP</u></a> je skriptovací jazyk na strane servera. Robia sa pomocou neho rôzne webové <b>aplikácie</b> ako je kniha hostí, počítadlo návštev, anketa, diskusné fórum alebo chat.
+			</p>
+			<h3>
+				JavaScript
+			</h3>
+			<p>
+				<a href="javascript.html" style="color: brown"><u>JavaScript</u></a> je tiež skriptovací jazyk na strane klienta. To znamená, že to, čo robí JavaScript sa vždy odohráva na našom počítači (resp. na počítači užívateľa našich stránok) a neodosiela žiadne dáta na server. Pomocou JavaScriptu teda nevytvoríte nič, čo by muselo prebehnúť Internetom. JavaScripty dokonca fungujú, aj keď nie sme k Internetu práve  pripojení.
+			</p>
+		</div>
+		<div id="bottom-body">															<!--Pätička-->
+			<center>
+				Vytvoril Igor Novák
+				<br>
+				<script>
+					function datum() {
+						var dat = new Date();
+						dat.setTime(Date.parse(document.lastModified));
+						var mesiac=1;
+						mesiac=mesiac+dat.getMonth();
+						var vrat = dat.getDate() + "." + mesiac + "." + dat.getFullYear();
+						return vrat;
+					}
+				</script>
+					Aktualizované
+					<script>
+						document.write(datum());
+					</script>
+					<br>
+					<br>
+					<script>
+						//document.write(document.lastModified);
+					</script>
+			</center>
+		</div>
+	</div>
+</body>
+</html>

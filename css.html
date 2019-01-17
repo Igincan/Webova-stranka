@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS | Zadanie</title>
+	<meta charset="utf-8">
+	<meta name="keywords" content="CSS">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script type="text/javascript" src="clock.js"></script>
+</head>
+<body onload="startTime()">
+	<div id="body">
+		<div id="top-body">
+			<center>
+				<a href="index.html"><img src="pictures/menu/index.png"></a>
+				<a href="html.html"><img src="pictures/menu/html.png"></a>
+				<a href="css.html"><img src="pictures/menu/css.png"></a>
+				<a href="php.html"><img src="pictures/menu/php.png"></a>
+				<a href="javascript.html"><img src="pictures/menu/js.png"></a>
+			</center>
+			<b><div id="clock"></div></b>
+		</div>
+		<div id="mid-body">
+			<img src="pictures/logos/css.png" align="right" class="picture">
+	        <h2>
+	            <span>CSS štýly</span>
+	        </h2>
+	        <p>Vitajte na stránke zaoberajúcej sa CSS štýlmi!</p>
+	        <p>Na tejto stránke sa dozviete množstvo informácii o CSS štýloch.</p>
+	        <p>
+	            <b>Håkon Wium Lie</b>
+	            <br>
+	            Je to priekopník, aktivista a politik.
+	            <br>
+	            Je známy vďaka konceptu CSS, počas toho pracoval s Timom Bernersom Leeom a Robertom Cailliauom.
+	        </p>
+		    <h3>Úvod do CSS</h3>
+		    <p>Štandard CSS (Cascading Style Sheets, tiež kaskádové štýly), priniesol do webdizajnu možnosť oddeliť obsah webových dokumentov od prezentácie. Pod prezentáciou tu rozumieme predovšetkým vizuálne grafické spracovanie dokumentu a jeho typografiu. Oddelením obsahu od prezentácie sa stala tvorba (X)HTML dokumentov jednoduchšou a prehľadnejšou. CSS zároveň umožňuje ďaleko väčšiu kontrolu nad prezentáciou dokumentu, a tým aj ďaleko väčšiu slobodu pri návrhu prezentácie, než bolo kedy možné prostredníctvom HTML. (Po zavedení CSS bola časť funkcionality súvisiaca výhradne s prezentáciou z HTML postupne odobraná.) Vďaka týmto skutočnostiam spôsobilo CSS doslova revolúciu vo webdizajne a je dnes základným nástrojom webdizajnu. (<a href="http://www.w3schools.com/css/default.asp" target="_blank" style="color: brown"><u>do sveta</u></a>)</p>
+		    <li>CSS vznikli okolo roku 1997, autorom CSS je <b>Håkon Wium Lie</b></li>
+		    <li>Previazanie HTML s CSS je jednoduché a prehľadné</li>
+		    <li>Je to kolekcia metód pre grafickú úpravu webových stránok. (Kaskádové, pretože sa na &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;seba môžu vrstviť definície štýlu, ale platí len tá posledná.)</li>
+		    <li>Pomocou CSS môžeme definovať vzhľad a vlastnosti všetkých HTML elementov</li>
+		    <li>Ich používanie znamená efektívne oddelenie obsahu HTML dokumentu a jeho vzhľadu</li>
+		    <li>Dovoľujú lepšie grafické spracovanie webu</li>
+		    <li>Použitie CSS znamená zmenšenie datového objemu zdrojového kódu</li>
+		    <li>CSS sú skutočne len štýly, nie nové tagy</li>
+		    <li>Sú to len vlastnosti, ktoré rozširujú súčasné známe tagy o nové možnosti</li>
+		    <li>Má ich pod patronátom W3C</li>
+		    <li>CSS štýlov je strašne veľa a sú tak rozsiahle, že  vlastne prevyšujú problematiku &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;klasického HTML, hoci vlastne tvoria jeho doplnok</li>
+		    <h3>Princípy CSS štýlov</h3>
+		    <p>CSS je <b>deklaratívny jazyk</b>, s jednouchou a ľahko čitateľnou syntaxou. CSS súboru hovoríme <b>šablóna</b> alebo tiež <b>štýl</b> (style sheet). Podobne ako (X)HTML dokumenty, aj CSS šablóny sú vlastne textové súbory. Šablóna pozostáva z pravidiel. Pravidlo sa skladá z dvoch častí.</p>
+		    <li>Prvá je podmienka, ktorej hovoríme <b>selektor</b>, a ktorá určuje, na ktoré elementy v dokumente bude pravidlo aplikované.</li>
+		    <li>Druhá časť je séria <b>deklarácií</b>, uzavretá v zložených zátvorkách, z ktorých každá mení nejakú vlastnosť cieľového elementu.</li>
+		    <p>Príklad CSS pravidla:</p>
+		    <table border="1px" style="border-collapse: collapse;">
+		        <tr><td>p strong {color: navy; font-weight: bold; background: transparent}</td></tr>
+		    </table>
+		    <p><b>p strong</b>  je selektor pravidla. Hovorí, že pravidlo bude aplikované na každý element strong, ktorý je v dokumente nasledovníkom nejakého elementu p, t.j. nachádza sa vo vnútri nejakého odstavca.</p>
+		    <p>Na každý takýto element budú aplikované tri deklarácie:</p>
+		    <ol type="B" start="1">
+		        <li><b>color:  navy;</b> – jeho farba sa zmení na tmavomodrú, (color je vlastnosť a navy jej hodnota (farba: modrá), vlastnosť a hodnota sú oddelené   dvojbodkou a medzerou)</li>
+		        <li><b>font-weight: bold;</b> - font bude tučný,</li>
+		        <li><b>background: transparent;</b> – pozadie bude priesvitné.</li>
+		    </ol>
+		    <p>{} zložené zátvorky vymedzujú deklaráciu formátu tohto selektoru. Dve deklarácie sa oddeľujú bodkočiarkou (je možné písať bodkočiarku i na koniec poslednej deklarácie, ale nie je tam povinná)</p>
+		    <h3>Selektory</h3>
+		    <p>Základné druhy:</p>
+		    <li><b>selektor typu:</b> vyberá element podľa mena elementu. Občas sa hodí aj univerzálny selektor, znak „*“, ktorý vyberá každý element;</li>
+		    <li><b>ID selektor:</b> vyberie element, ktorý má hodnotu atribútu id nastavenú na nejakú konkrétnu hodnotu. Takýto element môže byť v celom dokumente iba jeden. Selektor má tvar #&lt;hodnota&gt; ;</li>
+		    <li><b>selektor triedy:</b> vyberá podľa hodnoty atribútu class, hodnotou ktorého môže byť medzerami oddelený zoznam tried. Má tvar &lt;trieda&gt; . Je to jeden z najpoužívanejších a najpraktickejších selektorov;</li>
+		    <li><b>selektor pseudo-triedy:</b> vyberá element, ktorý je v určitom stave, v závislosti od akcie, ktorú vykonal používateľ. Tento selektor začína znakom „:“. Najdôležitejšie pseudotriedy sú :link (nenavštívený odkaz), :visited (navštívený odkaz), :hover (element, nad ktorým je práve kurzor), a :active (element, nad ktorý používateľ drží stlačené tlačidlo myši).</li>
+		    <p>
+		        <div>
+		            V súvislosti so selektormi podľa ID a podľa triedy sa často hodia dva (X)HTML elementy:
+		            <li>&lt;<b>div</b>&gt; - je blokovým elementom</li>
+		            <li>&lt;<b>span</b>&gt; – je riadkovým elementom</li>
+		            <b>Div</b> sa najčastejšie  prekladá ako oddiel. Zahŕňa v sebe ľubovoľne veľkú oblasť textu vrátane nadpisov, obrázkov a tabuliek. Nezriedka sa    celá stránka vyskytuje vo vnútri jedného elementu &lt;div&gt;. Pred a za oddielom sa zalomí riadok. V tomto zmysle je &lt;div&gt; veľmi    podobný odstavcu  &lt;p&gt;.  Na rozdiel od odstavca ale &lt;div&gt; nerobí pred a za sebou vizuálne medzery.
+		            <br>
+		            <b>Span</b> slúži pre logické vymedzenie časti textu, ktorá bude inakšie   formátovaná alebo na ňu bude viazaný skript. Je príbuzný s tagom div    s tým rozdielom, že &lt;span&gt; je vnútri riadku, tzn. nezalamuje pred a po sebe riadok.
+		            <p>
+		                Pomocou priradeného ID, ale predovšetkým pomocou tried možno z týchto elementov „vyrobiť“ nový element so špeciálnym formátovaním, aký v (  X)HTML nie je.
+		            </p>
+		        </div>
+		    </p>
+		    <p>Selektory je možné kombinovať a vytvárať tak zložené selektory.</p>
+		</div>
+		<div id="bottom-body">
+			<center>
+				Vytvoril Igor Novák
+				<br>
+				<script>
+					function datum() {
+						var dat = new Date();
+						dat.setTime(Date.parse(document.lastModified));
+						var mesiac=1;
+						mesiac=mesiac+dat.getMonth();
+						var vrat = dat.getDate() + "." + mesiac + "." + dat.getFullYear();
+						return vrat;
+					}
+				</script>
+					Aktualizované
+					<script>
+						document.write(datum());
+					</script>
+					<br>
+					<br>
+					<script>
+						//document.write(document.lastModified);
+					</script>
+			</center>
+		</div>
+	</div>
+</body>
+</html>

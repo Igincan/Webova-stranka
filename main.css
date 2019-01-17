@@ -1,0 +1,52 @@
+body{
+	background-image: url("pictures/backgrounds/background.png");
+	font-family: Calibri;
+	margin: 0;
+	padding: 0;
+}
+
+code{
+	color: DimGrey;
+}
+
+.tab{
+	text-indent: 4ex;
+}
+
+.picture{
+	position: static;
+	top: 5px;
+	right: 5px;
+}
+
+#body{
+	background-image: url("pictures/backgrounds/body-background.jpg");
+	padding-bottom: 4ex;
+}
+
+#top-body{
+	background-image: url("pictures/backgrounds/top-background.jpg");
+	height: 64px;
+}
+
+#mid-body{
+	height: auto;
+	min-width: 200px;
+	max-width: 595px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 4ex;
+	background-color: white;
+}
+
+#bottom-body{
+	font-size: 80%;
+	color: white;
+}
+
+#clock{
+	color: white;
+	position: fixed;
+	top: 6px;
+	left: 8px;
+}
